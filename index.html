@@ -1,0 +1,795 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Thu Sep 26 2024 12:01:56 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="66caecf1e5bdd7b5cad3f4dc" data-wf-site="66caecf1e5bdd7b5cad3f47c" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Website Name</title>
+  <meta content="Place website meta description here" name="description">
+  <meta content="Website Name" property="og:title">
+  <meta content="Place website meta description here" property="og:description">
+  <meta content="Website Name" property="twitter:title">
+  <meta content="Place website meta description here" property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/lumos-startertemplate.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://use.typekit.net/xhq3qij.js" type="text/javascript"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.jpg" rel="apple-touch-icon">
+  <script>
+(function(global){global.pageFunctions=global.pageFunctions||{executed:{},functions:{},addFunction:function(id,fn){if(!this.functions[id])this.functions[id]=fn},executeFunctions:function(){if(this.added)return;this.added=true;for(const id in this.functions){if(!this.executed[id]){try{this.functions[id]();this.executed[id]=true}catch(e){console.error(`Error executing function ${id}:`,e)}}}}}})(window);
+</script>
+</head>
+<body>
+  <div class="page_wrap">
+    <div class="page_code_wrap">
+      <div class="page_code_base w-embed">
+        <style>
+/* variables */
+:root {
+	/* grid */
+	--column-count: 12;
+	--grid-main: repeat(var(--column-count), minmax(0, 1fr));
+	--grid-1: repeat(1, minmax(0, 1fr));
+	--grid-2: repeat(2, minmax(0, 1fr));
+	--grid-3: repeat(3, minmax(0, 1fr));
+	--grid-4: repeat(4, minmax(0, 1fr));
+	--grid-5: repeat(5, minmax(0, 1fr));
+	--grid-6: repeat(6, minmax(0, 1fr));
+	--grid-7: repeat(7, minmax(0, 1fr));
+	--grid-8: repeat(8, minmax(0, 1fr));
+	--grid-9: repeat(9, minmax(0, 1fr));
+	--grid-10: repeat(10, minmax(0, 1fr));
+	--grid-11: repeat(11, minmax(0, 1fr));
+	--grid-12: repeat(12, minmax(0, 1fr));
+	--grid-gap-total: calc(var(--grid-gap--main) * (var(--column-count) - 1));
+	--grid-width: calc(min(var(--max-width--main), 100vw) - (var(--padding-horizontal--main) * 2));
+	--column-width: calc((var(--grid-width) - var(--grid-gap-total)) / var(--column-count) + var(--grid-gap--main));
+	--breakout-gutter: minmax(calc(var(--padding-horizontal--main) - var(--grid-gap--main)), 1fr);
+	--breakout-remaining: calc(var(--max-width--main) - (var(--padding-horizontal--main) * 2));
+	--breakout-start: [full-start] var(--breakout-gutter) [content-start];
+	--breakout-end: [content-end] var(--breakout-gutter) [full-end];
+	--grid-breakout-single: var(--breakout-start) minmax(0, var(--breakout-remaining)) var(--breakout-end);
+	--grid-breakout: var(--breakout-start) repeat(var(--column-count), minmax(0, calc((var(--breakout-remaining) - var(--grid-gap-total)) / var(--column-count)))) var(--breakout-end);
+	/* others */
+	--font-weight--inherit: inherit;
+	--font-weight--100: 100;
+	--font-weight--200: 200;
+	--font-weight--300: 300;
+	--font-weight--400: 400;
+	--font-weight--500: 500;
+	--font-weight--600: 600;
+	--font-weight--700: 700;
+	--font-weight--800: 800;
+	--font-weight--900: 900;
+	--text-transform--none: none;
+	--text-transform--uppercase: uppercase;
+	--text-transform--capitalize: capitalize;
+	--text-transform--lowercase: lowercase;
+	--text-transform--inherit: inherit;
+	--max-width--none: none;
+}
+/* default styles */
+body {
+	font-weight: var(--text-main--font-weight);
+	text-transform: var(--text-main--text-transform);
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6, p, label, blockquote {
+	font-size: inherit;
+	line-height: inherit;
+	font-weight: inherit;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+button {
+	background-color: unset;
+	padding: unset;
+	text-align: inherit;
+	cursor: pointer;
+}
+img::selection {
+	background: transparent;
+}
+:is(h1, h2, h3, h4, h5, h6, p) a {
+	text-decoration: underline;
+}
+.u-rich-text > *:first-child,
+.u-rich-text .w-richtext > *:first-child {
+	margin-top: 0;
+}
+.u-rich-text > *:last-child,
+.u-rich-text .w-richtext > *:last-child {
+	margin-bottom: 0;
+}
+video {
+	width: 100%;
+	object-fit: cover;
+}
+video.wf-empty {
+	padding: 0;
+}
+svg {
+	display: block;
+}
+section, header, footer {
+	position: relative;
+}
+@media (prefers-color-scheme: light) {
+	option {
+		color: black;
+	}
+}
+.wf-design-mode .g_clickable_wrap {
+	z-index: unset;
+}
+/* line clamp */
+.u-line-clamp-1, .u-line-clamp-2, .u-line-clamp-3, .u-line-clamp-4 {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.u-line-clamp-2 { -webkit-line-clamp: 2; }
+.u-line-clamp-3 { -webkit-line-clamp: 3; }
+.u-line-clamp-4 { -webkit-line-clamp: 4; }
+/* focus states */
+[tabindex]:focus-visible,
+a:focus-visible,
+button:focus-visible,
+.w-checkbox-input--inputType-custom.w--redirected-focus,
+.w-form-formradioinput--inputType-custom.w--redirected-focus {
+	outline: 2px solid var(--theme--text);
+	outline-offset: 4px;
+}
+.w-checkbox-input--inputType-custom.w--redirected-focus,
+.w-form-formradioinput--inputType-custom.w--redirected-focus {
+	box-shadow: none;
+}
+/* section padding */
+[data-padding-top="none"] { padding-top: var(--padding-vertical--none); }
+[data-padding-bottom="none"] { padding-bottom: var(--padding-vertical--none); }
+[data-padding-top="small"] { padding-top: var(--padding-vertical--small); }
+[data-padding-bottom="small"] { padding-bottom: var(--padding-vertical--small); }
+[data-padding-top="main"] { padding-top: var(--padding-vertical--main); }
+[data-padding-bottom="main"] { padding-bottom: var(--padding-vertical--main); }
+[data-padding-top="large"] { padding-top: var(--padding-vertical--large); }
+[data-padding-bottom="large"] { padding-bottom: var(--padding-vertical--large); }
+/*border-radius*/
+[data-border-radius="small"]{border-radius:var(--border-radius-small)}
+[data-border-radius="main"]{border-radius:var(--border-radius-main)}
+[data-border-radius="large"]{border-radius:var(--border-radius-large)}
+/*show element*/
+[show="true"]{display:inherit}
+[show="false"]{display:none}
+.u-hide-rich-text-media > *:not(h1,h2,h3,h4,h5,h6,p,blockquote),
+.u-hide-if-empty-cms:not(:has(.w-dyn-item)),
+.u-embed-js,
+.u-embed-css {
+	display: none !important;
+}
+</style>
+      </div>
+      <div class="page_code_color w-embed">
+        <style>
+/* theme light */
+:root,
+[data-theme="light"],
+[data-theme="dark"] [data-theme="invert"] {
+	--theme--background: var(--swatch--light);
+	--theme--text: var(--swatch--dark);
+	--theme--border: var(--swatch--light-secondary);
+	/* button primary */
+	--button--background: var(--swatch--brand);
+	--button--text: var(--swatch--brand-text);
+	--button--border: var(--swatch--brand);
+	--button--background-hover: var(--swatch--dark);
+	--button--text-hover: var(--swatch--light);
+	--button--border-hover: var(--swatch--dark);
+	/* button secondary */
+	--button-secondary--background: var(--swatch--transparent);
+	--button-secondary--text: var(--swatch--dark);
+	--button-secondary--border: var(--swatch--light-secondary);
+	--button-secondary--background-hover: var(--swatch--brand);
+	--button-secondary--text-hover: var(--swatch--brand-text);
+	--button-secondary--border-hover: var(--swatch--brand);
+}
+/* theme dark */
+[data-theme="dark"],
+[data-theme="invert"],
+[data-theme="light"] [data-theme="invert"] {
+	--theme--background: var(--swatch--dark);
+	--theme--text: var(--swatch--light);
+	--theme--border: var(--swatch--dark-secondary);
+	/* button primary */
+	--button--background: var(--swatch--brand);
+	--button--text: var(--swatch--brand-text);
+	--button--border: var(--swatch--brand);
+	--button--background-hover: var(--swatch--light);
+	--button--text-hover: var(--swatch--dark);
+	--button--border-hover: var(--swatch--light);
+	/* button secondary */
+	--button-secondary--background: var(--swatch--transparent);
+	--button-secondary--text: var(--swatch--light);
+	--button-secondary--border: var(--swatch--dark-secondary);
+	--button-secondary--background-hover: var(--swatch--brand);
+	--button-secondary--text-hover: var(--swatch--brand-text);
+	--button-secondary--border-hover: var(--swatch--brand);
+}
+/* button secondary */
+[data-button-style="secondary"] {
+	--button--background: var(--button-secondary--background);
+	--button--text: var(--button-secondary--text);
+	--button--border: var(--button-secondary--border);
+	--button--background-hover: var(--button-secondary--background-hover);
+	--button--text-hover: var(--button-secondary--text-hover);
+	--button--border-hover: var(--button-secondary--border-hover);
+}
+/* apply colors */
+:is(c, :where([data-theme]:not([data-theme="inherit"]))) {
+	background-color: var(--theme--background);
+	color: var(--theme--text);
+}
+</style>
+      </div>
+      <div class="page_code_responsive w-embed">
+        <style>
+/* desktop */
+:root {
+	/* custom */
+}
+/* tablet */
+@media screen and (max-width: 991px) {
+	:root {
+		/* custom */
+		--padding-horizontal--main: 2rem;
+		/* adaptive sizes */
+		--size--2rem: 1.75rem;
+		--size--2-5rem: 2.18rem;
+		--size--3rem: 2.52rem;
+		--size--3-5rem: 2.73rem;
+		--size--4rem: 3rem;
+		--size--4-5rem: 3.375rem;
+		--size--5rem: 3.75rem;
+		--size--5-5rem: 4.125rem;
+		--size--6rem: 4.5rem;
+		--size--6-5rem: 4.875rem;
+		--size--7rem: 5.25rem;
+		--size--7-5rem: 5.625rem;
+		--size--8rem: 6rem;
+		--size--8-5rem: 6.375rem;
+		--size--9rem: 6.75rem;
+		--size--9-5rem: 7.125rem;
+		--size--10rem: 7.5rem;
+		--size--11rem: 8.25rem;
+		--size--12rem: 9rem;
+		--size--13rem: 9.75rem;
+		--size--14rem: 10.5rem;
+		--size--15rem: 11.25rem;
+		--size--16rem: 12rem;
+	}
+}
+/* landscape */
+@media screen and (max-width: 767px) {
+	:root {
+		/* custom */
+		--padding-horizontal--main: 1rem;
+		/* adaptive sizes */
+		--size--2-5rem: 2rem;
+		--size--3rem: 2.25rem;
+		--size--3-5rem: 2.375rem;
+		--size--4rem: 2.5rem;
+		--size--4-5rem: 2.75rem;
+		--size--5rem: 3rem;
+		--size--5-5rem: 3.25rem;
+		--size--6rem: 3.5rem;
+		--size--6-5rem: 3.75rem;
+		--size--7rem: 4rem;
+		--size--7-5rem: 4.25rem;
+		--size--8rem: 4.5rem;
+		--size--8-5rem: 4.75rem;
+		--size--9rem: 5rem;
+		--size--9-5rem: 5.25rem;
+		--size--10rem: 5.5rem;
+		--size--11rem: 5.75rem;
+		--size--12rem: 6rem;
+		--size--13rem: 6.5rem;
+		--size--14rem: 7rem;
+		--size--15rem: 7.5rem;
+		--size--16rem: 8rem;
+	}
+}
+/* portrait */
+@media screen and (max-width: 479px) {
+	:root {
+		/* custom */
+	}
+}
+</style>
+      </div>
+      <div class="page_code_custom w-embed">
+        <style>
+[hide-element="true"]{display:none}
+/*[process-reversed]{
+	grid-column-start:6;
+  grid-column-end:-1;
+}*/
+.block_content[process-reversed="true"]{
+background-color:red;
+}
+</style>
+      </div>
+    </div>
+    <div class="styleguide_guide_wrap">
+      <div class="w-embed">
+        <style>
+html:not(.wf-design-mode) .styleguide_guide_wrap {
+	display: none;
+}
+.styleguide_guide_layout {
+	counter-reset: gridguides;
+}
+.styleguide_guide_layout > div::before {
+  counter-increment: gridguides;
+  content: counter(gridguides);
+}
+</style>
+      </div>
+      <div data-padding-bottom="none" data-padding-top="none" class="styleguide_guide_contain u-container">
+        <div class="styleguide_guide_layout u-grid-custom">
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+          <div class="styleguide_guide_column u-vflex-center-bottom"></div>
+        </div>
+      </div>
+    </div>
+    <main id="main" class="page_main">
+      <section data-theme="light" class="hero_section">
+        <div data-padding-bottom="small" data-padding-top="small" class="hero_contain u-container u-grid-tablet">
+          <div class="header_text_contain u-column-full">
+            <div style="max-width: none;" class="g_heading_wrap u-text-h1 u-weight-medium">
+              <div class="g_heading_rich u-hide-rich-text-media u-text-align-center u-text-h2 w-richtext">
+                <h1>Pieter Van Puyenbroeck</h1>
+              </div>
+            </div>
+            <div style="max-width: none;" class="g_heading_wrap u-text-h2">
+              <div class="g_heading_rich u-hide-rich-text-media u-text-align-center w-richtext">
+                <h2>Webflow Developer</h2>
+              </div>
+            </div>
+            <div style="max-width: none;" class="g_heading_wrap u-text-h2">
+              <div class="g_heading_rich u-hide-rich-text-media u-text-align-center w-richtext">
+                <h2>UI/UX Designer</h2>
+              </div>
+            </div>
+          </div>
+          <div class="hero_image u-column-custom">
+            <div id="w-node-d5158169-2164-f360-206b-d1ce1d4a7f1d-98865923" class="background_element u-column-custom w-embed"><svg width="auto" height="auto" viewbox="0 0 692 696" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 348C0 540.195 154.91 696 346 696H692V0H346C154.91 0 0 155.805 0 348Z" fill="#FF7262"></path>
+              </svg></div>
+            <div id="w-node-fa71479a-1817-c908-f452-01b69d08db36-98865923" class="hero_image_wrap u-cover-absolute"><img src="images/Pieter_hero.png" loading="lazy" alt="" sizes="(max-width: 479px) 13vw, (max-width: 767px) 14vw, (max-width: 991px) 8vw, 10vw" srcset="images/Pieter_hero-p-500.png 500w, images/Pieter_hero.png 752w" class="hero_image u-full-height u-contain"></div>
+          </div>
+          <div id="w-node-bf741ba5-0fba-8b6c-daaa-e6849f898fcc-98865923" class="hero_content u-column-5">
+            <div class="hero_button_contain u-vflex-center-top">
+              <div class="text_info_block_wrap u-text-align-center">
+                <div class="text_info_block u-text-h2 w-richtext">
+                  <h2>biografie</h2>
+                </div>
+                <div class="text_info_block_bottom u-text-large w-richtext">
+                  <p>Gepassioneerde webflow developer met een sterke interesse in marketing</p>
+                </div>
+              </div>
+              <div class="text_info_block_wrap u-text-align-center">
+                <div class="text_info_block u-text-h2 w-richtext">
+                  <h4>services</h4>
+                </div>
+                <div class="text_info_block_bottom u-text-large w-richtext">
+                  <p>Webflow development</p>
+                  <p>Website design</p>
+                  <p>SEO</p>
+                </div>
+              </div>
+              <div class="text_info_block_wrap u-text-align-center">
+                <div class="text_info_block u-text-h2 w-richtext">
+                  <h4>Contact</h4>
+                </div>
+                <div class="text_info_block_bottom u-text-large w-richtext">
+                  <p>Deinze, België</p>
+                  <p>pieter@vanpuyenbroeck.be</p>
+                  <p>+32456080179</p>
+                  <p>‍</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-theme="light" class="section_advantage_wrap">
+        <div data-padding-bottom="main" data-padding-top="main" class="advantage_container u-container">
+          <div class="section_header u-text-h2 w-richtext">
+            <p>Ervaring</p>
+          </div>
+          <div class="advantage_logo_wrap u-grid-custom">
+            <div data-w-id="e13d23ba-3acd-ea2d-9aa0-067e776221d5" class="logo_wrap u-column-2 u-vflex-center-bottom"><img src="images/Figma_Symbol_6.svg" loading="lazy" alt="" class="image">
+              <div class="logo_text u-weight-bold w-richtext">
+                <p class="logo_text_paragraph">FIGMA</p>
+              </div>
+            </div>
+            <div data-w-id="e13d23ba-3acd-ea2d-9aa0-067e776221d5" class="logo_wrap u-column-2 u-vflex-center-bottom"><img src="images/Photoshop_idp8M450A2_2.svg" loading="lazy" alt="" class="image">
+              <div class="logo_text u-weight-bold w-richtext">
+                <p class="logo_text_paragraph">PHOTOSHOP</p>
+              </div>
+            </div>
+            <div data-w-id="e13d23ba-3acd-ea2d-9aa0-067e776221d5" class="logo_wrap u-column-2 u-vflex-center-bottom"><img src="images/Webflow_id2IyfqSKv_8.svg" loading="lazy" alt="" class="image">
+              <div class="logo_text u-weight-bold w-richtext">
+                <p class="logo_text_paragraph">WEBFLOW</p>
+              </div>
+            </div>
+            <div data-w-id="e13d23ba-3acd-ea2d-9aa0-067e776221d5" class="logo_wrap u-column-2 u-vflex-center-bottom"><img src="images/css3.svg" loading="lazy" alt="" class="image">
+              <div class="logo_text u-weight-bold w-richtext">
+                <p class="logo_text_paragraph">HTML/CSS</p>
+              </div>
+            </div>
+            <div data-w-id="e13d23ba-3acd-ea2d-9aa0-067e776221d5" class="logo_wrap u-column-2 u-vflex-center-bottom"><img src="images/google-tile.svg" loading="lazy" alt="" class="image">
+              <div class="logo_text u-weight-bold w-richtext">
+                <p class="logo_text_paragraph">SEO</p>
+              </div>
+            </div>
+            <div data-w-id="e13d23ba-3acd-ea2d-9aa0-067e776221d5" class="logo_wrap u-column-2 u-vflex-center-bottom"><img src="images/icons8-visual-studio-code.svg" loading="lazy" alt="" class="image">
+              <div class="logo_text u-weight-bold w-richtext">
+                <p class="logo_text_paragraph">VISUAL STUDIO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="waarom_freelance" data-theme="inherit">
+        <div data-padding-bottom="main" data-padding-top="main" class="freelance_explain u-container u-grid-tablet">
+          <div class="explain_content u-column-6">
+            <div class="explain_heading u-text-h2 w-richtext">
+              <h1>Waarom een freelance webflow webdesigner?</h1>
+            </div>
+            <div class="explain_paragraph w-richtext">
+              <p class="paragraph">Een freelance webflow webdesigner biedt flexibiliteit, kosteneffectiviteit en expertise. Met een freelance webdesigner kunt u uw website aanpassen aan uw specifieke behoeften, zonder de beperkingen van een standaard sjabloon. Bovendien zijn freelance webdesigners vaak betaalbaarder dan grote webdesignbureaus, terwijl ze toch hoogwaardige ontwerpen en professionele service leveren.</p>
+            </div>
+            <ul role="list" class="bullet_list">
+              <li>
+                <div class="feature_listitem_wrap u-hflex-left-center">
+                  <div class="listitem_icon">
+                    <p class="svg-code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>&lt;svg id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 204.64 260.53&quot;&gt;<br>  &lt;defs&gt;<br>    &lt;style&gt;<br>      .cls-1 {<br>        fill: #fff;<br>      }<br><br>      .cls-1, .cls-2, .cls-3 {<br>        stroke: #000;<br>        stroke-miterlimit: 10;<br>        stroke-width: 7px;<br>      }<br><br>      .cls-2 {<br>        fill: none;<br>      }<br>    &lt;/style&gt;<br>  &lt;/defs&gt;<br>  &lt;g&gt;<br>    &lt;path class=&quot;cls-1&quot; d=&quot;M117.62,135.19c-6.16,62.57-26.05,112.37-45.35,115.2,2.82-3.71,5.3-7.85,7.47-12.19,11.89-13.69,26.2-50.77,31.41-103.64,3.07-31.12,2.25-60.66-2.31-83.18-4.66-22.99-11.87-31.71-16.63-32.18-2.57-.26-5.57,1.4-8.78,4.8-.93-2.07-1.92-4.11-3-6.08,4.11-3.75,8.29-5.6,12.42-5.19,20.15,1.99,31.24,56.82,24.78,122.46Z&quot;/&gt;<br>    &lt;path class=&quot;cls-3&quot; d=&quot;M121.59,48.8c-5.37-26.54-15.09-41.25-28.11-42.53-5.62-.56-11.14,1.47-16.43,5.97,1.2,1.82,2.33,3.71,3.38,5.68,1.08,1.98,2.07,4.01,3,6.08,3.21-3.4,6.21-5.06,8.78-4.8,4.76.47,11.98,9.19,16.63,32.18,4.56,22.52,5.38,52.06,2.31,83.18-5.21,52.87-19.52,89.95-31.41,103.64-2.17,4.34-4.64,8.48-7.47,12.19-1.7,2.27-3.53,4.36-5.5,6.23.67.15,1.34.25,2.02.32,13.01,1.28,25.42-11.25,35.86-36.24,9.35-22.35,16.26-52.49,19.45-84.87,3.19-32.38,2.3-63.28-2.5-87.04Z&quot;/&gt;<br>  &lt;/g&gt;<br>  &lt;g&gt;<br>    &lt;path class=&quot;cls-1&quot; d=&quot;M155.23,132.52c-6.16,62.57-26.05,112.37-45.35,115.2,2.82-3.71,5.3-7.85,7.47-12.19,11.89-13.69,26.2-50.77,31.41-103.64,3.07-31.12,2.25-60.66-2.31-83.18-4.66-22.99-11.87-31.71-16.63-32.18-2.57-.26-5.57,1.4-8.78,4.8-.93-2.07-1.92-4.11-3-6.08,4.11-3.75,8.29-5.6,12.42-5.19,20.15,1.99,31.24,56.82,24.78,122.46Z&quot;/&gt;<br>    &lt;path class=&quot;cls-3&quot; d=&quot;M159.2,46.13c-5.37-26.54-15.09-41.25-28.11-42.53-5.62-.56-11.14,1.47-16.43,5.97,1.2,1.82,2.33,3.71,3.38,5.68,1.08,1.98,2.07,4.01,3,6.08,3.21-3.4,6.21-5.06,8.78-4.8,4.76.47,11.98,9.19,16.63,32.18,4.56,22.52,5.38,52.06,2.31,83.18-5.21,52.87-19.52,89.95-31.41,103.64-2.17,4.34-4.64,8.48-7.47,12.19-1.7,2.27-3.53,4.36-5.5,6.23.67.15,1.34.25,2.02.32,13.01,1.28,25.42-11.25,35.86-36.24,9.35-22.35,16.26-52.49,19.45-84.87,3.19-32.38,2.3-63.28-2.5-87.04Z&quot;/&gt;<br>  &lt;/g&gt;<br>  &lt;g&gt;<br>    &lt;path class=&quot;cls-1&quot; d=&quot;M192.79,133.06c-6.16,62.57-26.05,112.37-45.35,115.2,2.82-3.71,5.3-7.85,7.47-12.19,11.89-13.69,26.2-50.77,31.41-103.64,3.07-31.12,2.25-60.66-2.31-83.18-4.66-22.99-11.87-31.71-16.63-32.18-2.57-.26-5.57,1.4-8.78,4.8-.93-2.07-1.92-4.11-3-6.08,4.11-3.75,8.29-5.6,12.42-5.19,20.15,1.99,31.24,56.82,24.78,122.46Z&quot;/&gt;<br>    &lt;path class=&quot;cls-3&quot; d=&quot;M196.76,46.67c-5.37-26.54-15.09-41.25-28.11-42.53-5.62-.56-11.14,1.47-16.43,5.97,1.2,1.82,2.33,3.71,3.38,5.68,1.08,1.98,2.07,4.01,3,6.08,3.21-3.4,6.21-5.06,8.78-4.8,4.76.47,11.98,9.19,16.63,32.18,4.56,22.52,5.38,52.06,2.31,83.18-5.21,52.87-19.52,89.95-31.41,103.64-2.17,4.34-4.64,8.48-7.47,12.19-1.7,2.27-3.53,4.36-5.5,6.23.67.15,1.34.25,2.02.32,13.01,1.28,25.42-11.25,35.86-36.24,9.35-22.35,16.26-52.49,19.45-84.87,3.19-32.38,2.3-63.28-2.5-87.04Z&quot;/&gt;<br>  &lt;/g&gt;<br>  &lt;g&gt;<br>    &lt;path class=&quot;cls-3&quot; d=&quot;M80.1,44.09c-7.57-26-18.48-39.84-31.56-40.03-13.08-.19-24.4,13.33-32.71,39.1-7.45,23.05-11.81,53.67-12.29,86.2-.47,32.53,3,63.26,9.77,86.52,7.56,26,18.48,39.84,31.56,40.03s24.39-13.33,32.71-39.1c7.45-23.05,11.8-53.67,12.28-86.2.47-32.53-2.99-63.26-9.76-86.52ZM45.06,242.91c-4.79-.07-12.71-8.15-19.27-30.67-6.42-22.06-9.7-51.42-9.25-82.69,1.01-68.94,19.51-112.67,31.81-112.49,4.79.07,12.7,8.15,19.26,30.67,6.42,22.06,9.7,51.42,9.25,82.69-1.01,68.94-19.5,112.67-31.8,112.49Z&quot;/&gt;<br>    &lt;path class=&quot;cls-2&quot; d=&quot;M76.87,130.42c-1.01,68.94-19.5,112.67-31.8,112.49-4.79-.07-12.71-8.15-19.27-30.67-6.42-22.06-9.7-51.42-9.25-82.69,1.01-68.94,19.51-112.67,31.81-112.49,4.79.07,12.7,8.15,19.26,30.67,6.42,22.06,9.7,51.42,9.25,82.69Z&quot;/&gt;<br>  &lt;/g&gt;<br>&lt;/svg&gt;</p>
+                  </div>
+                  <div class="bold_list_text w-richtext">
+                    <p><strong>Flexibel:</strong> pas uw website aan uw behoeften aan</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="feature_listitem_wrap u-hflex-left-center">
+                  <div class="listitem_icon">
+                    <p class="svg-code">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&quot;M320 96L192 96 144.6 24.9C137.5 14.2 145.1 0 157.9 0L354.1 0c12.8 0 20.4 14.2 13.3 24.9L320 96zM192 128l128 0c3.8 2.5 8.1 5.3 13 8.4C389.7 172.7 512 250.9 512 416c0 53-43 96-96 96L96 512c-53 0-96-43-96-96C0 250.9 122.3 172.7 179 136.4c0 0 0 0 0 0s0 0 0 0c4.8-3.1 9.2-5.9 13-8.4zm84 88c0-11-9-20-20-20s-20 9-20 20l0 14c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1c0 0 0 0 0 0s0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4l0 14.6c0 11 9 20 20 20s20-9 20-20l0-13.8c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15c0 0 0 0 0 0l-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7l0-13.9z&quot;/&gt;&lt;/svg&gt;</p>
+                  </div>
+                  <div class="bold_list_text w-richtext">
+                    <p><strong>Kosteneffectief:</strong> betaalbaar webdesign zonder concessies te doen aan kwaliteit</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="feature_listitem_wrap u-hflex-left-center">
+                  <div class="listitem_icon">
+                    <p class="svg-code"><br>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>&lt;svg id=&quot;Layer_2&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 199.05 159.49&quot;&gt;<br>  &lt;defs&gt;<br>    &lt;style&gt;<br>      .cls-1 {<br>        fill: none;<br>      }<br><br>      .cls-1, .cls-2 {<br>        stroke-width: .38px;<br>      }<br><br>      .cls-1, .cls-2, .cls-3 {<br>        stroke: #000;<br>        stroke-linecap: round;<br>        stroke-miterlimit: 10;<br>      }<br><br>      .cls-3 {<br>        stroke-width: .5px;<br>      }<br>    &lt;/style&gt;<br>  &lt;/defs&gt;<br>  &lt;g id=&quot;Layer_1-2&quot; data-name=&quot;Layer_1&quot;&gt;<br>    &lt;path d=&quot;M176.07,0H17.33c-3.86,0-7,3.14-7,7v119.67c0,3.86,3.14,7,7,7h93.07l12-12H22.33V12h148.74v48.6c.14,0,.27,0,.41.01,3.96.15,7.86.92,11.59,2.25V7c0-3.86-3.14-7-7-7Z&quot;/&gt;<br>    &lt;path class=&quot;cls-3&quot; d=&quot;M2.63,121.45c-1.86,0-3,2.03-2.03,3.62l9.38,15.34c.43.7,1.2,1.14,2.02,1.14h90.83c.39-.59.84-1.15,1.36-1.67l18.21-18.21.22-.22H2.63Z&quot;/&gt;<br>    &lt;path class=&quot;cls-2&quot; d=&quot;M190.37,120.04c-.49.49-1,.97-1.52,1.41-1.79,1.56-3.74,2.86-5.78,3.9-8.16,4.18-17.89,4.22-26.09.14l-33.59,33.59c-.29.29-.78.29-1.08,0l-11.05-11.05c-.29-.3-.29-.79,0-1.08l33.3-33.3c-6.15-11.03-4.54-25.22,4.83-34.6,5.96-5.96,13.87-8.77,21.68-8.45,3.23.13,6.44.8,9.49,2l-9.49,9.48-7.68,7.68c-1.28,1.28-1.27,3.37.01,4.65l11.62,11.62c1.27,1.28,3.36,1.29,4.64.01l3.41-3.41,13.76-13.76c4.12,10.42,1.96,22.74-6.46,31.17Z&quot;/&gt;<br>    &lt;path d=&quot;M176.07,0H17.33c-3.86,0-7,3.14-7,7v119.67c0,3.86,3.14,7,7,7h93.07l12-12H22.33V12h148.74v48.6c.14,0,.27,0,.41.01,3.96.15,7.86.92,11.59,2.25V7c0-3.86-3.14-7-7-7Z&quot;/&gt;<br>    &lt;path class=&quot;cls-3&quot; d=&quot;M2.63,121.45c-1.86,0-3,2.03-2.03,3.62l9.38,15.34c.43.7,1.2,1.14,2.02,1.14h90.83c.39-.59.84-1.15,1.36-1.67l18.21-18.21.22-.22H2.63Z&quot;/&gt;<br>    &lt;path class=&quot;cls-1&quot; d=&quot;M102.83,141.55c.39-.59.84-1.15,1.36-1.67l6.21-6.21,12-12,.22-.22&quot;/&gt;<br>  &lt;/g&gt;<br>&lt;/svg&gt;</p>
+                  </div>
+                  <div class="bold_list_text w-richtext">
+                    <p><strong>Expertise:</strong> professionele ontwerpen en service</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="image_container u-column-6">
+            <div data-border-radius="main" class="image_about_wrap u-vflex-center-top">
+              <div show="false" class="color_overlay u-cover-absolute"></div><img src="images/computerscreen_1.avif" loading="lazy" alt="" class="hero_image u-full-height">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="waarom_webflow" data-theme="inherit">
+        <div data-padding-bottom="main" data-padding-top="main" class="freelance_explain_reverse u-container u-grid-tablet">
+          <div id="w-node-_4fef889a-19c9-0b2f-93c4-4f8dd3ac9e9f-d3ac9e9d" class="explain_content_reverse u-column-custom">
+            <div class="explain_heading u-text-h2 w-richtext">
+              <h1>Waarom Webflow?</h1>
+            </div>
+            <div class="explain_paragraph w-richtext">
+              <p class="paragraph">Webflow is de perfecte keuze voor bedrijven die op zoek zijn naar een professionele, op maat gemaakte website. Met de flexibiliteit van Webflow kan een developer snel en efficiënt aanpassingen doorvoeren, zodat uw website altijd up-to-date blijft. Daarnaast zorgt Webflow voor snelle laadtijden, uitstekende SEO-mogelijkheden en veilige hosting. Dit alles betekent dat u een website krijgt die niet alleen mooi oogt, maar ook beter presteert en aansluit bij uw bedrijfsdoelen.</p>
+            </div>
+            <ul role="list" class="bullet_list">
+              <li>
+                <div class="feature_listitem_wrap u-hflex-left-center">
+                  <div class="listitem_icon">
+                    <p class="svg-code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>&lt;svg id=&quot;Layer_2&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 122.25 119.44&quot;&gt;<br>  &lt;g id=&quot;Layer_1-2&quot; data-name=&quot;Layer_1&quot;&gt;<br>    &lt;rect width=&quot;58.42&quot; height=&quot;33.49&quot;/&gt;<br>    &lt;rect y=&quot;42.42&quot; width=&quot;58.42&quot; height=&quot;33.49&quot;/&gt;<br>    &lt;path d=&quot;M51.42,92.95v19.49H7v-19.49h44.42ZM58.42,85.95H0v33.49h58.42v-33.49h0Z&quot;/&gt;<br>    &lt;path d=&quot;M122.09,24.22v72.83c0,6.19-2.81,11.12-7.93,13.88-3.57,1.93-7.07,2.15-7.46,2.17h-34.51v-8.25h34.2c1.42-.1,7.7-.96,7.7-7.81V23.39l.1-.45c.03-.18.33-2.22-.67-3.48-1.07-1.33-3.45-1.62-5.26-1.62h-15.92v9.04l-22.11-13.16L92.34.56v9.03h15.92c5.21,0,9.09,1.6,11.53,4.75,2.92,3.76,2.55,8.29,2.3,9.88Z&quot;/&gt;<br>  &lt;/g&gt;<br>&lt;/svg&gt;</p>
+                  </div>
+                  <div class="bold_list_text w-richtext">
+                    <p><strong>Gebruiksvriendelijke editor: </strong>Dankzij de Webflow Editor kunt u zelf eenvoudig content aanpassen, zonder technische kennis, waardoor uw site altijd relevant en actueel blijft.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="feature_listitem_wrap u-hflex-left-center">
+                  <div class="listitem_icon">
+                    <p class="svg-code">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&quot;M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm320 96c0-26.9-16.5-49.9-40-59.3L280 88c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 204.7c-23.5 9.5-40 32.5-40 59.3c0 35.3 28.7 64 64 64s64-28.7 64-64zM144 176a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm-16 80a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM400 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z&quot;/&gt;&lt;/svg&gt;</p>
+                  </div>
+                  <div class="bold_list_text w-richtext">
+                    <p><strong>Uitstekende prestaties:</strong> snelle laadtijden, sterke SEO mogelijkheden voor hogere zichtbaarheid en betere gebruikerservaring.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="feature_listitem_wrap u-hflex-left-center">
+                  <div class="listitem_icon">
+                    <p class="svg-code">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&quot;M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0z&quot;/&gt;&lt;/svg&gt;</p>
+                  </div>
+                  <div class="bold_list_text w-richtext">
+                    <p><strong>Veilige hosting:</strong> professionele ontwerpen en service</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="w-node-_4fef889a-19c9-0b2f-93c4-4f8dd3ac9f3c-d3ac9e9d" class="image_content_reverse u-column-custom">
+            <div data-border-radius="main" class="image_about_wrap u-vflex-center-top">
+              <div show="false" class="color_overlay u-cover-absolute"></div><img src="images/videoframe_webflow_1.avif" loading="lazy" alt="" class="hero_image u-full-height">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="process" data-theme="inherit">
+        <div data-padding-bottom="main" data-padding-top="main" class="process_container u-container">
+          <div style="max-width: none;" class="g_heading_wrap u-text-h2">
+            <div class="g_heading_rich u-hide-rich-text-media u-text-align-center w-richtext">
+              <h2>Hoe gaan we te werk?</h2>
+            </div>
+          </div>
+          <div class="process_wrap u-grid-landscape"><img src="images/undraw_Meeting_re_i53h.png" loading="lazy" alt="" sizes="(max-width: 479px) 93vw, (max-width: 767px) 40vw, (max-width: 991px) 39vw, 42vw" srcset="images/undraw_Meeting_re_i53h-p-500.png 500w, images/undraw_Meeting_re_i53h-p-800.png 800w, images/undraw_Meeting_re_i53h.png 1028w" class="process_image u-column-custom u-shadow-main">
+            <div class="content_block u-column-custom u-vflex-left-top">
+              <div class="small_number u-text-small w-richtext">
+                <p>01</p>
+              </div>
+              <div class="content_heading u-text-h3 w-richtext">
+                <p>Eerste gesprek</p>
+              </div>
+              <div style="max-width: 40ch;" class="g_paragraph_wrap">
+                <div class="g_paragraph_rich u-hide-rich-text-media w-richtext">
+                  <p>Hierbij leren we elkaar beter kennen en bepalen we wat de problemen zijn die men tracht op te lossen met een nieuwe website en hoe wij hierin kunnen helpen.Na een succesvol eerste gesprek volgt een ontdekkings gesprek. Hierbij leren we het product of dienst beter kennen. Hierbij bepalen we ook duidelijk wat de verwachtingen zijn wat betreft tijd, budget en verwacht resultaat.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="process_wrap u-grid-landscape"><img process-reversed="true" src="images/undraw_Agreement_re_d4dv.png" alt="" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 40vw, (max-width: 991px) 39vw, 42vw" srcset="images/undraw_Agreement_re_d4dv-p-500.png 500w, images/undraw_Agreement_re_d4dv-p-800.png 800w, images/undraw_Agreement_re_d4dv.png 986w" class="process_imag_reversed u-column-custom u-shadow-main">
+            <div process-reversed="true" id="w-node-d9e2401b-e1fc-2bd0-3fc1-b63e0abbf2ef-0abbf2ed" class="content_block_reversed u-column-custom u-vflex-left-top">
+              <div class="small_number u-text-small w-richtext">
+                <p>02</p>
+              </div>
+              <div class="content_heading u-text-h3 w-richtext">
+                <p>Offerte</p>
+              </div>
+              <div style="max-width: 40ch;" class="g_paragraph_wrap">
+                <div class="g_paragraph_rich u-hide-rich-text-media w-richtext">
+                  <p>Als de verwachtingen duidelijk zijn kan er een offerte opgemaakt worden.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="process_wrap u-grid-landscape"><img src="images/undraw_Build_wireframe_re_ln7g.png" loading="lazy" alt="" sizes="(max-width: 479px) 93vw, (max-width: 767px) 40vw, (max-width: 991px) 39vw, 42vw" srcset="images/undraw_Build_wireframe_re_ln7g-p-500.png 500w, images/undraw_Build_wireframe_re_ln7g-p-800.png 800w, images/undraw_Build_wireframe_re_ln7g.png 1060w" class="process_image u-column-custom u-shadow-main">
+            <div class="content_block u-column-custom u-vflex-left-top">
+              <div class="small_number u-text-small w-richtext">
+                <p>03</p>
+              </div>
+              <div class="content_heading u-text-h3 w-richtext">
+                <p>Wireframe en Design</p>
+              </div>
+              <div style="max-width: 40ch;" class="g_paragraph_wrap">
+                <div class="g_paragraph_rich u-hide-rich-text-media w-richtext">
+                  <p>Na een akkoord beginnen we met het ontwerp. Op voorafgesproken datums bespreken we het ontwerp en passen we waar nodig aan. Op die manier blijft iedereen betrokken in het design proces en kan er aangepast worden waar nodig.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="process_wrap u-grid-landscape"><img process-reversed="true" src="images/undraw_Start_building_re_xani.png" alt="" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 40vw, (max-width: 991px) 39vw, 42vw" srcset="images/undraw_Start_building_re_xani-p-500.png 500w, images/undraw_Start_building_re_xani-p-800.png 800w, images/undraw_Start_building_re_xani.png 1037w" class="process_imag_reversed u-column-custom u-shadow-main">
+            <div process-reversed="true" id="w-node-d9e2401b-e1fc-2bd0-3fc1-b63e0abbf2ef-0abbf2ed" class="content_block_reversed u-column-custom u-vflex-left-top">
+              <div class="small_number u-text-small w-richtext">
+                <p>04</p>
+              </div>
+              <div class="content_heading u-text-h3 w-richtext">
+                <p>Ontwikkelen website in Webflow</p>
+              </div>
+              <div style="max-width: 40ch;" class="g_paragraph_wrap">
+                <div class="g_paragraph_rich u-hide-rich-text-media w-richtext">
+                  <p>Als het design is afgeklopt begint het ontwikkelen in Webflow. Naargelang de complexiteit kan dit een week tot enkele maanden duren. De verwachte deadline wordt op voorhand duidelijk bepaald.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="process_wrap u-grid-landscape"><img src="images/undraw_Proud_coder_re_exuy.png" loading="lazy" alt="" sizes="(max-width: 479px) 93vw, (max-width: 767px) 40vw, (max-width: 991px) 39vw, 42vw" srcset="images/undraw_Proud_coder_re_exuy-p-500.png 500w, images/undraw_Proud_coder_re_exuy-p-800.png 800w, images/undraw_Proud_coder_re_exuy.png 958w" class="process_image u-column-custom u-shadow-main">
+            <div class="content_block u-column-custom u-vflex-left-top">
+              <div class="small_number u-text-small w-richtext">
+                <p>05</p>
+              </div>
+              <div class="content_heading u-text-h3 w-richtext">
+                <p>Website hosten</p>
+              </div>
+              <div style="max-width: 40ch;" class="g_paragraph_wrap">
+                <div class="g_paragraph_rich u-hide-rich-text-media w-richtext">
+                  <p>Als de website volledig is afgewerkt zal deze beschikbaar gemaakt worden op het domein van het bedrijf. Ik kan hierbij ook begeleiden om de hosting op te zetten.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="process_svg_container u-cover-absolute u-grid-desktop"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 939 927" fill="#F24E1E" class="process_svg u-column-custom">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 463.5C0 719.484 210.202 927 469.5 927H939V0H469.5C210.202 0 0 207.516 0 463.5Z" fill="#F24E1E" fill-opacity="0.5" class="process_svg_path"></path>
+            </svg></div>
+        </div>
+      </section>
+      <section data-theme="inherit">
+        <div class="finish_container u-container">
+          <div data-padding-bottom="main" data-padding-top="main" data-w-id="d1e4b3b9-d509-766a-8ea2-552779dfa958" class="finish_wrap u-grid-desktop"><img src="images/celebrating_1.avif" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 50vw" srcset="images/celebrating_1celebrating.avif 500w, images/celebrating_1celebrating.avif 800w, images/celebrating_1.avif 1080w" alt="" class="finish_image u-column-custom"></div>
+        </div>
+      </section>
+      <section data-theme="inherit">
+        <div data-padding-bottom="main" data-padding-top="main" class="form_container u-container">
+          <div class="form_sections_grid u-grid-desktop">
+            <div class="form_image_col u-column-6"><img src="images/contact.avif" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 50vw" srcset="images/contact-p-500.jpg 500w, images/contact.avif 1920w" alt="" class="form_image"></div>
+            <div class="form_text_col u-column-5 u-flex-grow">
+              <div class="w-richtext">
+                <h1 class="form_heading u-text-h2">We horen graag van je</h1>
+              </div>
+              <div class="form_subheading u-text-large w-richtext">
+                <h3 class="heading-2">Hulp nodig bij de online zichtbaarheid van uw bedrijf?</h3>
+              </div>
+              <div class="form_wrap u-vflex-left-between">
+                <div class="form_block_contact w-form">
+                  <form id="email-form" name="email-form" data-name="Email Form" method="post" data-wf-page-id="66caecf1e5bdd7b5cad3f4dc" data-wf-element-id="82c13156-3984-1072-27e2-bc6b4e9270f9">
+                    <div class="form_name_wrap">
+                      <div class="g-icon-holder"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" width="100%">
+                          <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"></path>
+                        </svg></div><input class="form_field w-input" maxlength="256" name="name" data-name="Name" placeholder="Naam" type="text" id="name" required="">
+                    </div>
+                    <div class="form_email_wrap u-input-margin">
+                      <div class="g-icon-holder"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" width="100%">
+                          <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
+                        </svg></div><input class="form_field w-input" maxlength="256" name="email" data-name="Email" placeholder="Email" type="email" id="email" required="">
+                    </div>
+                    <div class="form_message_wrap u-input-margin">
+                      <div class="g-icon-holder"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" width="100%">
+                          <path d="M64 0C28.7 0 0 28.7 0 64L0 352c0 35.3 28.7 64 64 64l96 0 0 80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416 448 416c35.3 0 64-28.7 64-64l0-288c0-35.3-28.7-64-64-64L64 0z"></path>
+                        </svg></div><input class="form_field message w-input" maxlength="256" name="message" data-name="message" placeholder="Bericht" type="text" id="message" required="">
+                    </div><input type="submit" data-wait="Please wait..." class="form_submit_button g_tag_wrap w-button" value="Submit">
+                  </form>
+                  <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                  </div>
+                  <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section data-theme="dark" class="footer-section">
+      <div data-padding-bottom="main" data-padding-top="main" class="footer-container u-container u-grid-desktop">
+        <div class="visual_block u-column-full u-grid-desktop">
+          <div class="footer_header u-column-full">
+            <div class="footer_text_header u-text-large w-richtext">
+              <h1 class="heading">Let&#x27;s get to work</h1>
+            </div>
+          </div>
+          <div class="footer_chat_circle u-column-custom u-vflex-center-center">
+            <div class="footer_text_chat u-text-large w-richtext">
+              <h1>CHAT</h1>
+            </div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 357 357" fill="none" class="chat_svg u-cover-absolute">
+              <circle cx="178.5" cy="178.5" r="174" stroke="currentColor" stroke-width="9"></circle>
+            </svg>
+          </div>
+        </div>
+        <div data-theme="invert" class="visual_bottom u-column-8"></div>
+        <div data-theme="invert" class="info_grid u-grid-column-4 u-column-full">
+          <div class="footer_info_wrap">
+            <div class="info_container">
+              <div class="footer_text_heading w-richtext">
+                <h5><strong>Adres</strong></h5>
+              </div>
+              <div class="w-richtext">
+                <p>Beekstraat 57</p>
+                <p>9800 Astene</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer_info_wrap">
+            <div class="info_container">
+              <div class="footer_text_heading w-richtext">
+                <h5><strong>Telefoon</strong></h5>
+              </div>
+              <div class="w-richtext">
+                <p>0498434954</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer_info_wrap">
+            <div class="info_container">
+              <div class="footer_text_heading w-richtext">
+                <h5><strong>Email</strong></h5>
+              </div>
+              <div class="w-richtext">
+                <p>pieter@vanpuyenbroeck.be</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer_info_wrap">
+            <div class="info_container">
+              <div class="footer_text_heading w-richtext">
+                <h5><strong>Quick Links</strong></h5>
+              </div>
+              <ul role="list" class="w-list-unstyled">
+                <li>
+                  <a href="#main" class="w-inline-block">
+                    <div>Waarom Webflow?</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#main" class="w-inline-block">
+                    <div>Over mij</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#process" class="w-inline-block">
+                    <div>Hoe gaan we te werk?</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66caecf1e5bdd7b5cad3f47c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script>
+pageFunctions.executeFunctions();
+</script>
+  <script>
+// create svg elements
+$(".svg-code").each(function (index) {
+  let svgCode = $(this).text();
+  $(svgCode).insertAfter($(this));
+});
+</script>
+</body>
+</html>
