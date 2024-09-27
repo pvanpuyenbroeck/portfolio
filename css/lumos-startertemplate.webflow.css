@@ -1433,6 +1433,7 @@ figure {
 }
 
 .hero_image.u-full-height.u-contain {
+  aspect-ratio: auto;
   height: 100%;
   position: relative;
 }
@@ -1570,6 +1571,7 @@ figure {
 
 .hero_image_wrap.u-cover-absolute {
   position: relative;
+  overflow: clip;
 }
 
 .image_about_wrap.u-vflex-center-top {
@@ -2027,6 +2029,10 @@ figure {
     grid-template-columns: var(--grid-breakout-single);
   }
 
+  .hero_image.u-column-custom {
+    overflow: clip;
+  }
+
   .advantage_logo_wrap.u-grid-custom {
     grid-template-columns: var(--grid-4);
   }
@@ -2035,7 +2041,15 @@ figure {
     font-size: inherit;
   }
 
-  .image_container.u-column-6, .image_content_reverse.u-column-custom {
+  .image_container.u-column-6 {
+    max-height: 20rem;
+  }
+
+  .hero_image_wrap.u-cover-absolute {
+    overflow: clip;
+  }
+
+  .image_content_reverse.u-column-custom {
     max-height: 20rem;
   }
 
@@ -2059,6 +2073,12 @@ figure {
 #w-node-bf741ba5-0fba-8b6c-daaa-e6849f898fcc-98865923 {
   grid-area: 2 / 1 / 3 / 6;
   justify-self: stretch;
+}
+
+@media screen and (max-width: 479px) {
+  #w-node-fa71479a-1817-c908-f452-01b69d08db36-98865923 {
+    grid-area: span 1 / span 6 / span 1 / span 6;
+  }
 }
 
 
