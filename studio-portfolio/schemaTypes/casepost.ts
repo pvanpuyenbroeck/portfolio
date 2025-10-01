@@ -1,6 +1,6 @@
 export default {
-  name: 'caseStudySingleBody',
-  title: 'Case Study Single Body',
+  name: 'casepost',
+  title: 'Case Study Post',
   type: 'document',
   fields: [
     {
@@ -64,7 +64,7 @@ export default {
       name: 'body',
       title: 'Inhoud',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [{ type: 'block'}, {type:'image'}],
     },
     {
       name: 'gallery',

@@ -1,5 +1,5 @@
 import testimonial from './testimonial'
 import casestudy from './casestudy'
-import casestudySingleBody from './casestudySingleBody'
+import casepost from './casepost'
 
-export const schemaTypes = [testimonial, casestudy, casestudySingleBody]
+export const schemaTypes = [testimonial, casestudy, casepost]
