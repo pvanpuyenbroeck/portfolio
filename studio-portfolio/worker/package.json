@@ -1,0 +1,16 @@
+{
+  "name": "ai-ready-blogpost-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "check": "tsc --noEmit",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240419.0",
+    "typescript": "^5.4.5",
+    "wrangler": "^3.53.1"
+  }
+}
